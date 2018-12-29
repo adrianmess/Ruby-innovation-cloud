@@ -37,7 +37,12 @@
 
 
 		<!-- Your code here -->
-
+		#create form to gather email signups
+		<%= form_for(@signup) do |f| %>
+		<div class="actions">
+			<%= f.submit "Create" %>
+		</div>
+		<% end %>
 
 	</div>
 </div>
