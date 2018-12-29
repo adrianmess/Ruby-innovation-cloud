@@ -3,6 +3,17 @@ class SignupsController < ApplicationController
 		@signup = Signup.new
 	end
 
+	def create
+		@signup = Signup.new(signup_params)
+		if @signup.save
+			redirect_to '/thanks'
+		else
+			render '/'
+		end
+	end
+
+
+
 	private
 	def signup_params
 		#collect data from form and update signup model
