@@ -39,6 +39,9 @@
 		<!-- Your code here -->
 		<!-- #create form to gather email signups -->
 		<%= form_for(@signup) do |f| %>
+		<div class="field">
+			<%= f.text_area :email %>
+		</div>
 		<div class="actions">
 			<%= f.submit "Create" %>
 		</div>
